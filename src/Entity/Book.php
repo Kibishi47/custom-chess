@@ -3,18 +3,25 @@
 namespace App\Entity;
 
 use ApiPlatform\Metadata\ApiResource;
-use ApiPlatform\Metadata\Get;
-use ApiPlatform\Metadata\GetCollection;
-use ApiPlatform\Metadata\Patch;
-use ApiPlatform\Metadata\Post;
 use App\Repository\BookRepository;
-use App\State\BookStateProcessor;
 use Doctrine\ORM\Mapping as ORM;
 
 #[ORM\Entity(repositoryClass: BookRepository::class)]
-#[ApiResource(mercure: true)]
+#[ApiResource(
+    mercure: 'object.getMercureOptions()'
+)]
 class Book
 {
+    public function getMercureOptions(): array
+    {
+        return [
+            'topics' => [
+                '@=iri(object)',
+                '@=iri(object.getOwner()) ~ "?topic=" ~ iri(object)'
+            ],
+        ];
+    }
+
     #[ORM\Id]
     #[ORM\GeneratedValue]
     #[ORM\Column]

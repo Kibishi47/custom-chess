@@ -17,9 +17,12 @@ final class NotifyController extends AbstractController
         MercurePublisher $publisher,
     ): JsonResponse
     {
-        $publisher->publish('/api/notify', [
-            'message' => $messageDto->message,
-        ]);
+        $publisher->publish(
+            path: '/api/notify',
+            data: [
+                'message' => $messageDto->message,
+            ]
+        );
 
         return $this->json([
             'success' => true,
