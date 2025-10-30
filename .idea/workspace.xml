@@ -4,23 +4,20 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c4ec54ec-3ba6-4c3c-ae5e-d2fa83eee103" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Dockerfile" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/compose.prod.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frankenphp/Caddyfile" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frankenphp/conf.d/10-app.ini" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frankenphp/conf.d/20-app.dev.ini" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frankenphp/conf.d/20-app.prod.ini" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frankenphp/docker-entrypoint.sh" afterDir="false" />
+    <list default="true" id="c4ec54ec-3ba6-4c3c-ae5e-d2fa83eee103" name="Changes" comment="feat: mercure working">
+      <change afterPath="$PROJECT_DIR$/src/Controller/PrivateNotifyController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Service/MercurePublisher.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/compose.override.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/compose.override.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/390633a5-55ac-47b5-bcc5-4df1c9031e64.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/390633a5-55ac-47b5-bcc5-4df1c9031e64.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/compose.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/compose.yaml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/bundles.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/bundles.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/packages/security.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/packages/security.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/symfony.lock" beforeDir="false" afterPath="$PROJECT_DIR$/symfony.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/base.html.twig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/packages/api_platform.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/packages/api_platform.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/packages/mercure.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/packages/mercure.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/NotifyController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/NotifyController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/Book.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Book.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/User.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -197,6 +194,7 @@
       <path value="$PROJECT_DIR$/vendor/symfony/security-csrf" />
       <path value="$PROJECT_DIR$/vendor/symfony/polyfill-intl-idn" />
       <path value="$PROJECT_DIR$/vendor/symfony/maker-bundle" />
+      <path value="$PROJECT_DIR$/vendor/firebase/php-jwt" />
     </include_path>
   </component>
   <component name="ProjectColorInfo">{
@@ -228,8 +226,8 @@
   },
   "keyToStringList": {
     "DatabaseDriversLRU": [
-      "sqlite",
-      "postgresql"
+      "postgresql",
+      "sqlite"
     ]
   }
 }]]></component>
@@ -256,11 +254,15 @@
       <option name="presentableId" value="Default" />
       <updated>1761664752314</updated>
       <workItem from="1761664753507" duration="17762000" />
-      <workItem from="1761745855204" duration="13295000" />
+      <workItem from="1761745855204" duration="29847000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="feat: mercure working" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: mercure working" />
   </component>
 </project>
