@@ -2,18 +2,21 @@
 
 namespace App\Entity;
 
-use ApiPlatform\Metadata\ApiResource;
 use App\Repository\UserRepository;
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity;
 use Symfony\Component\Security\Core\User\PasswordAuthenticatedUserInterface;
 use Symfony\Component\Security\Core\User\UserInterface;
+use Symfony\Component\Validator\Constraints as Assert;
 
 #[ORM\Entity(repositoryClass: UserRepository::class)]
 #[ORM\Table(name: '`user`')]
 #[ORM\UniqueConstraint(name: 'UNIQ_IDENTIFIER_EMAIL', fields: ['email'])]
-#[ApiResource]
+#[ORM\UniqueConstraint(name: 'UNIQ_IDENTIFIER_USERNAME', fields: ['username'])]
+#[UniqueEntity(fields: ['email'], groups: ['register'])]
+#[UniqueEntity(fields: ['username'], groups: ['register'])]
 class User implements UserInterface, PasswordAuthenticatedUserInterface
 {
     #[ORM\Id]
@@ -22,7 +25,14 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
     private ?int $id = null;
 
     #[ORM\Column(length: 180)]
+    #[Assert\NotBlank(groups: ['register'])]
+    #[Assert\Email(groups: ['register'])]
     private ?string $email = null;
+
+    #[ORM\Column(length: 255)]
+    #[Assert\NotBlank(groups: ['register'])]
+    #[Assert\Length(min: 3, max: 255, groups: ['register'])]
+    private ?string $username = null;
 
     /**
      * @var list<string> The user roles
@@ -34,10 +44,9 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
      * @var string The hashed password
      */
     #[ORM\Column]
+    #[Assert\NotBlank]
+    #[Assert\Length(min: 8, max: 255, groups: ['register'])]
     private ?string $password = null;
-
-    #[ORM\Column(length: 255)]
-    private ?string $username = null;
 
     /**
      * @var Collection<int, GamePlayer>
@@ -45,16 +54,9 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
     #[ORM\OneToMany(targetEntity: GamePlayer::class, mappedBy: 'player', orphanRemoval: true)]
     private Collection $gamePlayers;
 
-    /**
-     * @var Collection<int, Book>
-     */
-    #[ORM\OneToMany(targetEntity: Book::class, mappedBy: 'owner')]
-    private Collection $books;
-
     public function __construct()
     {
         $this->gamePlayers = new ArrayCollection();
-        $this->books = new ArrayCollection();
     }
 
     public function getId(): ?int
@@ -174,36 +176,6 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
             // set the owning side to null (unless already changed)
             if ($gamePlayer->getPlayer() === $this) {
                 $gamePlayer->setPlayer(null);
-            }
-        }
-
-        return $this;
-    }
-
-    /**
-     * @return Collection<int, Book>
-     */
-    public function getBooks(): Collection
-    {
-        return $this->books;
-    }
-
-    public function addBook(Book $book): static
-    {
-        if (!$this->books->contains($book)) {
-            $this->books->add($book);
-            $book->setOwner($this);
-        }
-
-        return $this;
-    }
-
-    public function removeBook(Book $book): static
-    {
-        if ($this->books->removeElement($book)) {
-            // set the owning side to null (unless already changed)
-            if ($book->getOwner() === $this) {
-                $book->setOwner(null);
             }
         }
 

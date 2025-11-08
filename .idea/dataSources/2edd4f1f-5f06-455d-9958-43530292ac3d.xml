@@ -4367,7 +4367,6 @@ true posixrules
       <Position>1</Position>
       <StateNumber>751</StateNumber>
       <StoredType>integer|0s</StoredType>
-      <SequenceId>16393</SequenceId>
       <TypeId>23</TypeId>
     </column>
     <column id="281" parent="272" name="owner_id">

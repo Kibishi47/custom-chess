@@ -36,10 +36,10 @@ services:
   database:
     image: postgres:${POSTGRES_VERSION:-16}-alpine
     environment:
-      POSTGRES_DB: ${POSTGRES_DB:-app}
+      POSTGRES_DB: ${POSTGRES_DB:-postgres}
       # You should definitely change the password in production
-      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-!ChangeMe!}
-      POSTGRES_USER: ${POSTGRES_USER:-app}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-azerty}
+      POSTGRES_USER: ${POSTGRES_USER:-postgres}
     healthcheck:
       test:
         [
@@ -55,10 +55,10 @@ services:
       start_period: 60s
     volumes:
       - database_data:/var/lib/postgresql/data:rw
-    ports:
-      - name: osef
-        target: 5432
-        published: 5432
+#    ports:
+#      - name: osef
+#        target: 5432
+#        published: 5432
       # You may use a bind-mounted host directory instead, so that it is harder to accidentally remove the volume and lose all your data!
       # - ./docker/db/data:/var/lib/postgresql/data:rw
 # Mercure is installed as a Caddy module, prevent the Flex recipe from installing another service
