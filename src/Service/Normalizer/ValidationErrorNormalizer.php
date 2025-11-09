@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Helper;
+namespace App\Service\Normalizer;
 
 use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\Validator\ConstraintViolationInterface;
