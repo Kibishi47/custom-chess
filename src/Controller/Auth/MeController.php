@@ -10,10 +10,8 @@ use App\Entity\User;
 final class MeController
 {
     #[Route('/api/me', name: 'api_me', methods: ['GET'], format: 'json')]
-    public function __invoke(#[CurrentUser] ?User $user): JsonResponse
+    public function __invoke(#[CurrentUser] User $user): JsonResponse
     {
-        if (!$user) return new JsonResponse(['message' => 'Unauthorized'], 401);
-
         return new JsonResponse([
             'id' => $user->getId(),
             'email' => $user->getEmail(),
