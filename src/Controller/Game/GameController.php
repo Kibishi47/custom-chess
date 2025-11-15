@@ -2,6 +2,7 @@
 
 namespace App\Controller\Game;
 
+use App\Dto\JoinGameDto;
 use App\Entity\Game;
 use App\Entity\GamePlayer;
 use App\Entity\User;
@@ -12,6 +13,7 @@ use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\HttpFoundation\Request;
+use Symfony\Component\HttpKernel\Attribute\MapRequestPayload;
 use Symfony\Component\Routing\Attribute\Route;
 use Symfony\Component\Security\Http\Attribute\CurrentUser;
 use Symfony\Component\Serializer\SerializerInterface;
@@ -19,21 +21,22 @@ use Symfony\Component\Serializer\SerializerInterface;
 class GameController extends AbstractController
 {
     public function __construct(
-        private readonly GameRepository $gameRepository,
-        private readonly EntityManagerInterface $entityManager,
-        private readonly SerializerInterface $serializer,
-        private readonly MercurePublisher $publisher,
+        private GameRepository         $gameRepository,
+        private EntityManagerInterface $entityManager,
+        private SerializerInterface    $serializer,
+        private MercurePublisher       $publisher,
     ) {}
 
     #[Route('/api/game/join', methods: ['POST'], format: 'json')]
-    public function join(#[CurrentUser] User $user): JsonResponse
+    public function join(#[MapRequestPayload] JoinGameDto $dto, #[CurrentUser] User $user): JsonResponse
     {
         if ($activeGame = $this->gameRepository->findActiveGameForPlayer($user)) {
             return new JsonResponse($this->serializeGame($activeGame), json: true);
         }
 
-        if (!$game = $this->gameRepository->findAvailableGame()) {
+        if (!$game = $this->gameRepository->findAvailableGame($dto->getBoardType())) {
             $game = new Game();
+            $game->setBoardType($dto->getBoardType()->getClass());
         }
 
         $color = $game->getRandomColor();

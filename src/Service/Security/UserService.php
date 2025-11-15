@@ -16,13 +16,9 @@ class UserService
 
     public function getUserFromBodyRequest(Request $request): User
     {
-        $data = json_decode($request->getContent(), true);
-
-        if (!$data || !isset($data['token'])) {
+        if (!$token = $request->get('token')) {
             throw new \Exception('Invalid payload', 400);
         }
-
-        $token = $data['token'];
 
         $jwtData = $this->tokenManager->parse($token);
         $username = $jwtData['username'];

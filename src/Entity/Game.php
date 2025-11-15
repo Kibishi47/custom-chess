@@ -47,6 +47,9 @@ class Game
     #[ORM\Column]
     private ?\DateTimeImmutable $createdAt = null;
 
+    #[ORM\Column(length: 255)]
+    private ?string $boardType = null;
+
     public function __construct()
     {
         $this->status = GameStatus::WAITING->value;
@@ -256,6 +259,18 @@ class Game
     public function setCreatedAt(\DateTimeImmutable $createdAt): static
     {
         $this->createdAt = $createdAt;
+
+        return $this;
+    }
+
+    public function getBoardType(): ?string
+    {
+        return $this->boardType;
+    }
+
+    public function setBoardType(string $boardType): static
+    {
+        $this->boardType = $boardType;
 
         return $this;
     }

@@ -2,6 +2,7 @@
 
 namespace App\Repository;
 
+use App\Chess\Board\BoardType;
 use App\Entity\Game;
 use App\Entity\User;
 use App\Enum\GameStatus;
@@ -18,14 +19,16 @@ class GameRepository extends ServiceEntityRepository
         parent::__construct($registry, Game::class);
     }
 
-    public function findAvailableGame(): ?Game
+    public function findAvailableGame(BoardType $boardType): ?Game
     {
         return $this->createQueryBuilder('g')
             ->leftJoin('g.gamePlayers', 'gp')
             ->groupBy('g.id')
             ->having('COUNT(gp.id) < 2')
             ->andWhere('g.status = :status')
+            ->andWhere('g.boardType = :boardType')
             ->setParameter('status', GameStatus::WAITING->value)
+            ->setParameter('boardType', $boardType->getClass())
             ->orderBy('g.createdAt', 'ASC')
             ->setMaxResults(1)
             ->getQuery()
