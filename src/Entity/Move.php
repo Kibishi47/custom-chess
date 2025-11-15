@@ -40,6 +40,11 @@ class Move
         $this->createdAt = new \DateTimeImmutable();
     }
 
+    public function getOppositeColor(): string
+    {
+        return $this->color === 'white' ? 'black' : 'white';
+    }
+
     public function getId(): ?int
     {
         return $this->id;

@@ -13,8 +13,8 @@ class Square
         public bool $enPassant = false,
     ) {}
 
-    public function getPositionName(): string
+    public function toSquare(): string
     {
-        return $this->position->getPositionName();
+        return $this->position->toSquare();
     }
 }

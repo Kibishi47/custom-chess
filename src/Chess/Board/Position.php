@@ -25,7 +25,7 @@ class Position
         ];
     }
 
-    public function getPositionName(): string
+    public function toSquare(): string
     {
         return chr($this->x + ord('a')) . ($this->y + 1);
     }

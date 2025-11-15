@@ -45,12 +45,6 @@ abstract class Piece
 
     abstract protected function isLegalMove(Square $endSquare): bool;
 
-    public static function getFromType(string $type, Square $square, string $color): ?Piece
-    {
-        $className = __NAMESPACE__ . '\\Type\\' . u($type)->camel()->toString();
-        return class_exists($className) ? new $className($square, $color) : null;
-    }
-
     protected function nothingBlocking(Square $target): bool
     {
         $start = $this->getPosition();
@@ -74,5 +68,14 @@ abstract class Piece
         }
 
         return true;
+    }
+
+    public function toArray(): array
+    {
+        return [
+            'key' => $this->getKey(),
+            'color' => $this->color,
+            'square' => $this->square->toSquare(),
+        ];
     }
 }

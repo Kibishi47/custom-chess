@@ -2,6 +2,7 @@
 
 namespace App\Entity;
 
+use App\Chess\Board\Board;
 use App\Enum\GameStatus;
 use App\Repository\GameRepository;
 use Doctrine\Common\Collections\ArrayCollection;
@@ -50,6 +51,8 @@ class Game
     #[ORM\Column(length: 255)]
     private ?string $boardType = null;
 
+    private ?Board $board = null;
+
     public function __construct()
     {
         $this->status = GameStatus::WAITING->value;
@@ -95,6 +98,32 @@ class Game
     {
         $this->setStatus(GameStatus::CANCELLED);
         $this->setEndedAt(new \DateTimeImmutable());
+    }
+
+    public function getBoard(): Board
+    {
+        if ($this->board) {
+            return $this->board;
+        }
+
+        $this->board = Board::createFromGame($this);
+        return $this->board;
+    }
+
+    public function applyMove(Move $move): void
+    {
+        if ($this->board) {
+            $this->board->applyMove($move);
+        }
+    }
+
+    public function getTurnColor(): string
+    {
+        if ($lastMove = $this->getMoves()->last()) {
+            return $lastMove->getOppositeColor();
+        }
+
+        return 'white';
     }
 
     /*
