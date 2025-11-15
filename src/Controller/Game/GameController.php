@@ -21,10 +21,10 @@ use Symfony\Component\Serializer\SerializerInterface;
 class GameController extends AbstractController
 {
     public function __construct(
-        private GameRepository         $gameRepository,
+        private GameRepository $gameRepository,
         private EntityManagerInterface $entityManager,
-        private SerializerInterface    $serializer,
-        private MercurePublisher       $publisher,
+        private SerializerInterface $serializer,
+        private MercurePublisher $publisher,
     ) {}
 
     #[Route('/api/game/join', methods: ['POST'], format: 'json')]
