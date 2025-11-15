@@ -15,11 +15,11 @@ class Game
     #[ORM\Id]
     #[ORM\GeneratedValue]
     #[ORM\Column]
-    #[Groups(['matchmaking'])]
+    #[Groups(['game.info'])]
     private ?int $id = null;
 
     #[ORM\Column(length: 255)]
-    #[Groups(['matchmaking'])]
+    #[Groups(['game.info'])]
     private ?string $status = null;
 
     #[ORM\Column(length: 255, nullable: true)]
@@ -35,7 +35,7 @@ class Game
      * @var Collection<int, GamePlayer>
      */
     #[ORM\OneToMany(targetEntity: GamePlayer::class, mappedBy: 'game', orphanRemoval: true)]
-    #[Groups(['matchmaking'])]
+    #[Groups(['game.info'])]
     private Collection $gamePlayers;
 
     /**
@@ -85,6 +85,12 @@ class Game
     public function finish(): void
     {
         $this->setStatus(GameStatus::FINISHED);
+        $this->setEndedAt(new \DateTimeImmutable());
+    }
+
+    public function cancel(): void
+    {
+        $this->setStatus(GameStatus::CANCELLED);
         $this->setEndedAt(new \DateTimeImmutable());
     }
 

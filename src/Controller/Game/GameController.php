@@ -5,17 +5,18 @@ namespace App\Controller\Game;
 use App\Entity\Game;
 use App\Entity\GamePlayer;
 use App\Entity\User;
-use App\Repository\GamePlayerRepository;
 use App\Repository\GameRepository;
 use App\Service\Mercure\MercurePublisher;
+use App\Service\Security\UserService;
 use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\JsonResponse;
+use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Routing\Attribute\Route;
 use Symfony\Component\Security\Http\Attribute\CurrentUser;
 use Symfony\Component\Serializer\SerializerInterface;
 
-class MatchmakingController extends AbstractController
+class GameController extends AbstractController
 {
     public function __construct(
         private readonly GameRepository $gameRepository,
@@ -24,8 +25,8 @@ class MatchmakingController extends AbstractController
         private readonly MercurePublisher $publisher,
     ) {}
 
-    #[Route('/api/matchmaking', methods: ['POST'], format: 'json')]
-    public function __invoke(#[CurrentUser] User $user): JsonResponse
+    #[Route('/api/game/join', methods: ['POST'], format: 'json')]
+    public function join(#[CurrentUser] User $user): JsonResponse
     {
         if ($activeGame = $this->gameRepository->findActiveGameForPlayer($user)) {
             return new JsonResponse($this->serializeGame($activeGame), json: true);
@@ -48,16 +49,42 @@ class MatchmakingController extends AbstractController
         $this->entityManager->persist($game);
         $this->entityManager->flush();
 
-        $gameSerialized = $this->serializeGame($game);
-        $this->publisher->publish('/api/matchmaking', $gameSerialized);
+        $this->publishGame($game);
 
-        return new JsonResponse($gameSerialized, json: true);
+        return new JsonResponse($this->serializeGame($game), json: true);
+    }
+
+    #[Route('/api/game/quit', methods: ['POST'])]
+    public function quit(Request $request, UserService $userService): JsonResponse
+    {
+        try {
+            $user = $userService->getUserFromBodyRequest($request);
+        } catch (\Exception $e) {
+            return $this->json(['message' => $e->getMessage()], $e->getCode());
+        }
+
+        if ($activeGame = $this->gameRepository->findActiveGameForPlayer($user)) {
+            $activeGame->cancel();
+
+            $this->entityManager->persist($activeGame);
+            $this->entityManager->flush();
+
+            $this->publishGame($activeGame);
+        }
+
+        return new JsonResponse();
+    }
+
+    private function publishGame(Game $game): void
+    {
+        $gameSerialized = $this->serializeGame($game);
+        $this->publisher->publish("/api/game/{$game->getId()}", $gameSerialized);
     }
 
     private function serializeGame(Game $game): string
     {
         return $this->serializer->serialize($game, 'json', [
-            'groups' => ['matchmaking'],
+            'groups' => ['game.info'],
         ]);
     }
 }

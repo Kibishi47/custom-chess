@@ -33,7 +33,7 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
     #[ORM\Column(length: 255)]
     #[Assert\NotBlank(groups: ['register'])]
     #[Assert\Length(min: 3, max: 255, groups: ['register'])]
-    #[Groups(['matchmaking'])]
+    #[Groups(['game.info'])]
     private ?string $username = null;
 
     /**

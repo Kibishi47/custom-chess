@@ -15,7 +15,7 @@ class GamePlayer
     private ?int $id = null;
 
     #[ORM\Column(length: 255)]
-    #[Groups(['matchmaking'])]
+    #[Groups(['game.info'])]
     private ?string $color = null;
 
     #[ORM\ManyToOne(inversedBy: 'gamePlayers')]
@@ -24,7 +24,7 @@ class GamePlayer
 
     #[ORM\ManyToOne(inversedBy: 'gamePlayers')]
     #[ORM\JoinColumn(nullable: false)]
-    #[Groups(['matchmaking'])]
+    #[Groups(['game.info'])]
     private ?User $player = null;
 
     public function getId(): ?int
