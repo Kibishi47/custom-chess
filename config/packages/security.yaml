@@ -28,4 +28,5 @@ security:
         - { path: ^/api/game/quit$, roles: PUBLIC_ACCESS }
         - { path: ^/api/register$, roles: PUBLIC_ACCESS }
         - { path: ^/api/login$, roles: PUBLIC_ACCESS }
+        - { path: ^/api/game/types, roles: PUBLIC_ACCESS }
         - { path: ^/api, roles: IS_AUTHENTICATED_FULLY }

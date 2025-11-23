@@ -2,6 +2,7 @@
 
 namespace App\Controller\Game;
 
+use App\Chess\Board\BoardType;
 use App\Dto\JoinGameDto;
 use App\Entity\Game;
 use App\Entity\GamePlayer;
@@ -26,6 +27,17 @@ class GameController extends AbstractController
         private SerializerInterface $serializer,
         private MercurePublisher $publisher,
     ) {}
+
+    #[Route('/api/game/types', methods: ['GET'], format: 'json')]
+    public function types(): JsonResponse
+    {
+        $types = array_reduce(BoardType::cases(), function (array|null $carry, BoardType $boardType) {
+            $carry[$boardType->value] = $boardType->getLabel();
+            return $carry;
+        });
+
+        return $this->json($types);
+    }
 
     #[Route('/api/game/join', methods: ['POST'], format: 'json')]
     public function join(#[MapRequestPayload] JoinGameDto $dto, #[CurrentUser] User $user): JsonResponse
