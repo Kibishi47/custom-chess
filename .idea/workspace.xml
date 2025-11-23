@@ -5,24 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c4ec54ec-3ba6-4c3c-ae5e-d2fa83eee103" name="Changes" comment="feat: mercure working">
-      <change afterPath="$PROJECT_DIR$/src/Chess/Engine/GameEngine.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/symfony2.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/symfony2.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/2edd4f1f-5f06-455d-9958-43530292ac3d.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/2edd4f1f-5f06-455d-9958-43530292ac3d.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/2edd4f1f-5f06-455d-9958-43530292ac3d/storage_v2/_src_/database/postgres.edMnLQ/schema/public.abK9xQ.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/2edd4f1f-5f06-455d-9958-43530292ac3d/storage_v2/_src_/database/postgres.edMnLQ/schema/public.abK9xQ.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Chess/Board/Board.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Chess/Board/Board.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Chess/Board/Square.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Chess/Board/Square.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Chess/Piece/Piece.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Chess/Piece/Piece.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Chess/Piece/Type/Bishop.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Chess/Piece/Type/Bishop.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Chess/Piece/Type/King.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Chess/Piece/Type/King.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Chess/Piece/Type/Knight.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Chess/Piece/Type/Knight.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Chess/Piece/Type/Pawn.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Chess/Piece/Type/Pawn.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Chess/Piece/Type/Queen.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Chess/Piece/Type/Queen.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Chess/Piece/Type/Rook.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Chess/Piece/Type/Rook.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/Game/GameController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/Game/GameController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/Game/MoveController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/Game/MoveController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/Game.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Game.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/GamePlayer.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/GamePlayer.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/Move.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Move.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Serializer/Normalizer/GameNormalizer.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Serializer/Normalizer/GameNormalizer.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -205,30 +191,30 @@
     <option name="openDirectoriesWithSingleClick" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/Users/emmanuelmoulin/Documents/Projets/Ecole/Symfony/custom-chess&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;php.override.implement.member.chooser.php.doc&quot;: &quot;NONE&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.keymap&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "git-widget-placeholder": "main",
+    "last_opened_file_path": "/Users/emmanuelmoulin/Documents/Projets/Ecole/Symfony/custom-chess",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "php.override.implement.member.chooser.php.doc": "NONE",
+    "settings.editor.selected.configurable": "preferences.keymap",
+    "vue.rearranger.settings.migration": "true"
   },
-  &quot;keyToStringList&quot;: {
-    &quot;DatabaseDriversLRU&quot;: [
-      &quot;postgresql&quot;,
-      &quot;sqlite&quot;
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "postgresql",
+      "sqlite"
     ]
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$" />

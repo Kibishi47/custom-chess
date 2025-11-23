@@ -2,6 +2,7 @@
 
 namespace App\Chess\Board;
 
+use App\Chess\Engine\GameEngine;
 use App\Chess\Piece\Piece;
 use App\Entity\Game;
 use App\Entity\Move;
@@ -81,11 +82,11 @@ abstract class Board
 
     public static function createFromGame(Game $game): Board
     {
-        $class = $game->getBoardType();
+        $class = BoardType::from($game->getBoardType())->getClass();
         $board = new $class();
 
         foreach ($game->getMoves() as $move) {
-            $engine = new \App\Chess\Engine\GameEngine();
+            $engine = new GameEngine();
             $engine->applyMoveOnBoard($board, $move);
         }
 

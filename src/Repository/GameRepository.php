@@ -28,7 +28,7 @@ class GameRepository extends ServiceEntityRepository
             ->andWhere('g.status = :status')
             ->andWhere('g.boardType = :boardType')
             ->setParameter('status', GameStatus::WAITING->value)
-            ->setParameter('boardType', $boardType->getClass())
+            ->setParameter('boardType', $boardType->value)
             ->orderBy('g.createdAt', 'ASC')
             ->setMaxResults(1)
             ->getQuery()

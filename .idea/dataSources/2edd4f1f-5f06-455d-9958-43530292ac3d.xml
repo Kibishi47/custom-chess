@@ -3,15 +3,7 @@
   <database-model serializer="dbm" dbms="POSTGRES" family-id="POSTGRES" format-version="4.53">
     <root id="1">
       <DateStyle>mdy</DateStyle>
-      <Grants>1||-9223372036854775808|c|G
-1||10|c|G
-1||10|C|G
-1||10|T|G
-4||-9223372036854775808|c|G
-4||10|c|G
-4||10|C|G
-4||10|T|G</Grants>
-      <IntrospectionStateNumber>782</IntrospectionStateNumber>
+      <IntrospectionStateNumber>794</IntrospectionStateNumber>
       <ServerVersion>17.6</ServerVersion>
       <StartupTime>1761898432</StartupTime>
       <TimeZones>true ACDT
@@ -95,8 +87,8 @@ false Africa/Timbuktu
 false Africa/Tripoli
 false Africa/Tunis
 false Africa/Windhoek
-true America/Adak
-true America/Anchorage
+false America/Adak
+false America/Anchorage
 false America/Anguilla
 false America/Antigua
 false America/Araguaina
@@ -116,7 +108,7 @@ false America/Argentina/Ushuaia
 false America/Aruba
 false America/Asuncion
 false America/Atikokan
-true America/Atka
+false America/Atka
 false America/Bahia
 false America/Bahia_Banderas
 false America/Barbados
@@ -125,18 +117,18 @@ false America/Belize
 false America/Blanc-Sablon
 false America/Boa_Vista
 false America/Bogota
-true America/Boise
+false America/Boise
 false America/Buenos_Aires
-true America/Cambridge_Bay
+false America/Cambridge_Bay
 false America/Campo_Grande
 false America/Cancun
 false America/Caracas
 false America/Catamarca
 false America/Cayenne
 false America/Cayman
-true America/Chicago
+false America/Chicago
 false America/Chihuahua
-true America/Ciudad_Juarez
+false America/Ciudad_Juarez
 false America/Coral_Harbour
 false America/Cordoba
 false America/Costa_Rica
@@ -147,123 +139,123 @@ false America/Curacao
 false America/Danmarkshavn
 false America/Dawson
 false America/Dawson_Creek
-true America/Denver
-true America/Detroit
+false America/Denver
+false America/Detroit
 false America/Dominica
-true America/Edmonton
+false America/Edmonton
 false America/Eirunepe
 false America/El_Salvador
-true America/Ensenada
+false America/Ensenada
 false America/Fort_Nelson
-true America/Fort_Wayne
+false America/Fort_Wayne
 false America/Fortaleza
-true America/Glace_Bay
+false America/Glace_Bay
 false America/Godthab
-true America/Goose_Bay
-true America/Grand_Turk
+false America/Goose_Bay
+false America/Grand_Turk
 false America/Grenada
 false America/Guadeloupe
 false America/Guatemala
 false America/Guayaquil
 false America/Guyana
-true America/Halifax
-true America/Havana
+false America/Halifax
+false America/Havana
 false America/Hermosillo
-true America/Indiana/Indianapolis
-true America/Indiana/Knox
-true America/Indiana/Marengo
-true America/Indiana/Petersburg
-true America/Indiana/Tell_City
-true America/Indiana/Vevay
-true America/Indiana/Vincennes
-true America/Indiana/Winamac
-true America/Indianapolis
-true America/Inuvik
-true America/Iqaluit
+false America/Indiana/Indianapolis
+false America/Indiana/Knox
+false America/Indiana/Marengo
+false America/Indiana/Petersburg
+false America/Indiana/Tell_City
+false America/Indiana/Vevay
+false America/Indiana/Vincennes
+false America/Indiana/Winamac
+false America/Indianapolis
+false America/Inuvik
+false America/Iqaluit
 false America/Jamaica
 false America/Jujuy
-true America/Juneau
-true America/Kentucky/Louisville
-true America/Kentucky/Monticello
-true America/Knox_IN
+false America/Juneau
+false America/Kentucky/Louisville
+false America/Kentucky/Monticello
+false America/Knox_IN
 false America/Kralendijk
 false America/La_Paz
 false America/Lima
-true America/Los_Angeles
-true America/Louisville
+false America/Los_Angeles
+false America/Louisville
 false America/Lower_Princes
 false America/Maceio
 false America/Managua
 false America/Manaus
 false America/Marigot
 false America/Martinique
-true America/Matamoros
+false America/Matamoros
 false America/Mazatlan
 false America/Mendoza
-true America/Menominee
+false America/Menominee
 false America/Merida
-true America/Metlakatla
+false America/Metlakatla
 false America/Mexico_City
-true America/Miquelon
-true America/Moncton
+false America/Miquelon
+false America/Moncton
 false America/Monterrey
 false America/Montevideo
-true America/Montreal
+false America/Montreal
 false America/Montserrat
-true America/Nassau
-true America/New_York
-true America/Nipigon
-true America/Nome
+false America/Nassau
+false America/New_York
+false America/Nipigon
+false America/Nome
 false America/Noronha
-true America/North_Dakota/Beulah
-true America/North_Dakota/Center
-true America/North_Dakota/New_Salem
+false America/North_Dakota/Beulah
+false America/North_Dakota/Center
+false America/North_Dakota/New_Salem
 false America/Nuuk
-true America/Ojinaga
+false America/Ojinaga
 false America/Panama
-true America/Pangnirtung
+false America/Pangnirtung
 false America/Paramaribo
 false America/Phoenix
-true America/Port-au-Prince
+false America/Port-au-Prince
 false America/Port_of_Spain
 false America/Porto_Acre
 false America/Porto_Velho
 false America/Puerto_Rico
 false America/Punta_Arenas
-true America/Rainy_River
-true America/Rankin_Inlet
+false America/Rainy_River
+false America/Rankin_Inlet
 false America/Recife
 false America/Regina
-true America/Resolute
+false America/Resolute
 false America/Rio_Branco
 false America/Rosario
-true America/Santa_Isabel
+false America/Santa_Isabel
 false America/Santarem
 true America/Santiago
 false America/Santo_Domingo
 false America/Sao_Paulo
 false America/Scoresbysund
-true America/Shiprock
-true America/Sitka
+false America/Shiprock
+false America/Sitka
 false America/St_Barthelemy
-true America/St_Johns
+false America/St_Johns
 false America/St_Kitts
 false America/St_Lucia
 false America/St_Thomas
 false America/St_Vincent
 false America/Swift_Current
 false America/Tegucigalpa
-true America/Thule
-true America/Thunder_Bay
-true America/Tijuana
-true America/Toronto
+false America/Thule
+false America/Thunder_Bay
+false America/Tijuana
+false America/Toronto
 false America/Tortola
-true America/Vancouver
+false America/Vancouver
 false America/Virgin
 false America/Whitehorse
-true America/Winnipeg
-true America/Yakutat
-true America/Yellowknife
+false America/Winnipeg
+false America/Yakutat
+false America/Yellowknife
 false Antarctica/Casey
 false Antarctica/Davis
 false Antarctica/DumontDUrville
@@ -377,7 +369,7 @@ false Asia/Yangon
 false Asia/Yekaterinburg
 false Asia/Yerevan
 false Atlantic/Azores
-true Atlantic/Bermuda
+false Atlantic/Bermuda
 false Atlantic/Canary
 false Atlantic/Cape_Verde
 false Atlantic/Faeroe
@@ -440,19 +432,19 @@ true CLST
 true CLT
 false COT
 false CST
-true CST6CDT
+false CST6CDT
 false CXT
-true Canada/Atlantic
-true Canada/Central
-true Canada/Eastern
-true Canada/Mountain
-true Canada/Newfoundland
-true Canada/Pacific
+false Canada/Atlantic
+false Canada/Central
+false Canada/Eastern
+false Canada/Mountain
+false Canada/Newfoundland
+false Canada/Pacific
 false Canada/Saskatchewan
 false Canada/Yukon
 true Chile/Continental
 true Chile/EasterIsland
-true Cuba
+false Cuba
 false DAVT
 false DDUT
 true EASST
@@ -465,7 +457,7 @@ true EETDST
 true EGST
 false EGT
 false EST
-true EST5EDT
+false EST5EDT
 false Egypt
 true Eire
 false Etc/GMT
@@ -647,12 +639,12 @@ false MPT
 true MSD
 false MSK
 false MST
-true MST7MDT
+false MST7MDT
 true MUST
 false MUT
 false MVT
 false MYT
-true Mexico/BajaNorte
+false Mexico/BajaNorte
 false Mexico/BajaSur
 false Mexico/General
 true NDT
@@ -667,7 +659,7 @@ true NZ-CHAT
 true NZDT
 false NZST
 false NZT
-true Navajo
+false Navajo
 false OMSST
 false OMST
 true PDT
@@ -683,7 +675,7 @@ false PMST
 false PONT
 false PRC
 false PST
-true PST8PDT
+false PST8PDT
 false PWT
 true PYST
 false PYT
@@ -753,17 +745,17 @@ false Turkey
 false UCT
 true ULAST
 false ULAT
-true US/Alaska
-true US/Aleutian
+false US/Alaska
+false US/Aleutian
 false US/Arizona
-true US/Central
-true US/East-Indiana
-true US/Eastern
+false US/Central
+false US/East-Indiana
+false US/Eastern
 false US/Hawaii
-true US/Indiana-Starke
-true US/Michigan
-true US/Mountain
-true US/Pacific
+false US/Indiana-Starke
+false US/Michigan
+false US/Mountain
+false US/Pacific
 false US/Samoa
 false UT
 false UTC
@@ -796,7 +788,7 @@ true YEKST
 false YEKT
 false Z
 false Zulu
-true posixrules
+false posixrules
 </TimeZones>
     </root>
     <database id="2" parent="1" name="postgres">
@@ -811,7 +803,7 @@ true posixrules
 13280||10|C|G
 13280||-9223372036854775808|U|G
 13280||10|U|G</Grants>
-      <IntrospectionStateNumber>782</IntrospectionStateNumber>
+      <IntrospectionStateNumber>794</IntrospectionStateNumber>
       <ObjectId>5</ObjectId>
       <OwnerName>postgres</OwnerName>
     </database>
@@ -4234,11 +4226,11 @@ true posixrules
       <AutoIntrospectionLevel>3</AutoIntrospectionLevel>
       <Comment>standard public schema</Comment>
       <Current>1</Current>
-      <LastIntrospectionL1Xid>782</LastIntrospectionL1Xid>
-      <LastIntrospectionL2Xid>782</LastIntrospectionL2Xid>
-      <LastIntrospectionL3Xid>782</LastIntrospectionL3Xid>
+      <LastIntrospectionL1Xid>794</LastIntrospectionL1Xid>
+      <LastIntrospectionL2Xid>794</LastIntrospectionL2Xid>
+      <LastIntrospectionL3Xid>794</LastIntrospectionL3Xid>
       <LastIntrospectionLevel>3</LastIntrospectionLevel>
-      <LastIntrospectionLocalTimestamp>2025-10-31.08:17:25</LastIntrospectionLocalTimestamp>
+      <LastIntrospectionLocalTimestamp>2025-11-23.18:21:59</LastIntrospectionLocalTimestamp>
       <ObjectId>2200</ObjectId>
       <StateNumber>532</StateNumber>
       <OwnerName>pg_database_owner</OwnerName>
@@ -4254,16 +4246,7 @@ true posixrules
       <LanguageName>plpgsql</LanguageName>
       <OwnerName>postgres</OwnerName>
     </routine>
-    <sequence id="266" parent="264" name="book_id_seq">
-      <DetailsLevel>2</DetailsLevel>
-      <ObjectId>16393</ObjectId>
-      <SequenceIdentity>1</SequenceIdentity>
-      <StartValue>1</StartValue>
-      <StateNumber>751</StateNumber>
-      <StoredType>integer|0s</StoredType>
-      <OwnerName>postgres</OwnerName>
-    </sequence>
-    <sequence id="267" parent="264" name="game_id_seq">
+    <sequence id="266" parent="264" name="game_id_seq">
       <DetailsLevel>2</DetailsLevel>
       <ObjectId>16401</ObjectId>
       <SequenceIdentity>1</SequenceIdentity>
@@ -4272,7 +4255,7 @@ true posixrules
       <StoredType>integer|0s</StoredType>
       <OwnerName>postgres</OwnerName>
     </sequence>
-    <sequence id="268" parent="264" name="game_player_id_seq">
+    <sequence id="267" parent="264" name="game_player_id_seq">
       <DetailsLevel>2</DetailsLevel>
       <ObjectId>16413</ObjectId>
       <SequenceIdentity>1</SequenceIdentity>
@@ -4281,7 +4264,7 @@ true posixrules
       <StoredType>integer|0s</StoredType>
       <OwnerName>postgres</OwnerName>
     </sequence>
-    <sequence id="269" parent="264" name="messenger_messages_id_seq">
+    <sequence id="268" parent="264" name="messenger_messages_id_seq">
       <DetailsLevel>2</DetailsLevel>
       <ObjectId>16442</ObjectId>
       <SequenceIdentity>1</SequenceIdentity>
@@ -4290,7 +4273,7 @@ true posixrules
       <StoredType>bigint|0s</StoredType>
       <OwnerName>postgres</OwnerName>
     </sequence>
-    <sequence id="270" parent="264" name="move_id_seq">
+    <sequence id="269" parent="264" name="move_id_seq">
       <DetailsLevel>2</DetailsLevel>
       <ObjectId>16422</ObjectId>
       <SequenceIdentity>1</SequenceIdentity>
@@ -4299,7 +4282,7 @@ true posixrules
       <StoredType>integer|0s</StoredType>
       <OwnerName>postgres</OwnerName>
     </sequence>
-    <sequence id="271" parent="264" name="user_id_seq">
+    <sequence id="270" parent="264" name="user_id_seq">
       <DetailsLevel>2</DetailsLevel>
       <ObjectId>16432</ObjectId>
       <SequenceIdentity>1</SequenceIdentity>
@@ -4308,130 +4291,73 @@ true posixrules
       <StoredType>integer|0s</StoredType>
       <OwnerName>postgres</OwnerName>
     </sequence>
-    <table id="272" parent="264" name="book">
-      <DetailsLevel>2</DetailsLevel>
-      <ObjectId>16394</ObjectId>
-      <StateNumber>751</StateNumber>
-      <AccessMethodId>2</AccessMethodId>
-      <OwnerName>postgres</OwnerName>
-    </table>
-    <table id="273" parent="264" name="doctrine_migration_versions">
+    <table id="271" parent="264" name="doctrine_migration_versions">
       <DetailsLevel>2</DetailsLevel>
       <ObjectId>16387</ObjectId>
       <StateNumber>750</StateNumber>
       <AccessMethodId>2</AccessMethodId>
       <OwnerName>postgres</OwnerName>
     </table>
-    <table id="274" parent="264" name="game">
+    <table id="272" parent="264" name="game">
       <DetailsLevel>2</DetailsLevel>
       <ObjectId>16402</ObjectId>
-      <StateNumber>751</StateNumber>
+      <StateNumber>789</StateNumber>
       <AccessMethodId>2</AccessMethodId>
       <OwnerName>postgres</OwnerName>
     </table>
-    <table id="275" parent="264" name="game_player">
+    <table id="273" parent="264" name="game_player">
       <DetailsLevel>2</DetailsLevel>
       <ObjectId>16414</ObjectId>
       <StateNumber>751</StateNumber>
       <AccessMethodId>2</AccessMethodId>
       <OwnerName>postgres</OwnerName>
     </table>
-    <table id="276" parent="264" name="messenger_messages">
+    <table id="274" parent="264" name="messenger_messages">
       <DetailsLevel>2</DetailsLevel>
       <ObjectId>16443</ObjectId>
       <StateNumber>751</StateNumber>
       <AccessMethodId>2</AccessMethodId>
       <OwnerName>postgres</OwnerName>
     </table>
-    <table id="277" parent="264" name="move">
+    <table id="275" parent="264" name="move">
       <DetailsLevel>2</DetailsLevel>
       <ObjectId>16423</ObjectId>
       <StateNumber>751</StateNumber>
       <AccessMethodId>2</AccessMethodId>
       <OwnerName>postgres</OwnerName>
     </table>
-    <table id="278" parent="264" name="user">
+    <table id="276" parent="264" name="user">
       <DetailsLevel>2</DetailsLevel>
       <ObjectId>16433</ObjectId>
       <StateNumber>751</StateNumber>
       <AccessMethodId>2</AccessMethodId>
       <OwnerName>postgres</OwnerName>
     </table>
-    <argument id="279" parent="265">
+    <argument id="277" parent="265">
       <ArgumentDirection>R</ArgumentDirection>
       <StoredType>trigger|0s</StoredType>
     </argument>
-    <column id="280" parent="272" name="id">
-      <DefaultExpression>nextval(&apos;book_id_seq&apos;::regclass)</DefaultExpression>
-      <NotNull>1</NotNull>
-      <Position>1</Position>
-      <StateNumber>751</StateNumber>
-      <StoredType>integer|0s</StoredType>
-      <TypeId>23</TypeId>
-    </column>
-    <column id="281" parent="272" name="owner_id">
-      <Position>2</Position>
-      <StateNumber>751</StateNumber>
-      <StoredType>integer|0s</StoredType>
-      <TypeId>23</TypeId>
-    </column>
-    <column id="282" parent="272" name="name">
-      <NotNull>1</NotNull>
-      <Position>3</Position>
-      <StateNumber>751</StateNumber>
-      <StoredType>varchar(255)|0s</StoredType>
-      <TypeId>1043</TypeId>
-    </column>
-    <foreign-key id="283" parent="272" name="fk_cbe5a3317e3c61f9">
-      <ColNames>owner_id</ColNames>
-      <ObjectId>16457</ObjectId>
-      <StateNumber>751</StateNumber>
-      <RefKeyColPositions>1</RefKeyColPositions>
-      <RefTableId>16433</RefTableId>
-    </foreign-key>
-    <index id="284" parent="272" name="book_pkey">
-      <ColNames>id</ColNames>
-      <NameSurrogate>1</NameSurrogate>
-      <ObjectId>16398</ObjectId>
-      <Primary>1</Primary>
-      <StateNumber>751</StateNumber>
-      <Unique>1</Unique>
-      <AccessMethodId>403</AccessMethodId>
-    </index>
-    <index id="285" parent="272" name="idx_cbe5a3317e3c61f9">
-      <ColNames>owner_id</ColNames>
-      <ObjectId>16400</ObjectId>
-      <StateNumber>751</StateNumber>
-      <AccessMethodId>403</AccessMethodId>
-    </index>
-    <key id="286" parent="272" name="book_pkey">
-      <NameSurrogate>1</NameSurrogate>
-      <ObjectId>16399</ObjectId>
-      <Primary>1</Primary>
-      <StateNumber>751</StateNumber>
-      <UnderlyingIndexId>16398</UnderlyingIndexId>
-    </key>
-    <column id="287" parent="273" name="version">
+    <column id="278" parent="271" name="version">
       <NotNull>1</NotNull>
       <Position>1</Position>
       <StateNumber>750</StateNumber>
       <StoredType>varchar(191)|0s</StoredType>
       <TypeId>1043</TypeId>
     </column>
-    <column id="288" parent="273" name="executed_at">
+    <column id="279" parent="271" name="executed_at">
       <DefaultExpression>NULL::timestamp without time zone</DefaultExpression>
       <Position>2</Position>
       <StateNumber>750</StateNumber>
       <StoredType>timestamp(0)|0s</StoredType>
       <TypeId>1114</TypeId>
     </column>
-    <column id="289" parent="273" name="execution_time">
+    <column id="280" parent="271" name="execution_time">
       <Position>3</Position>
       <StateNumber>750</StateNumber>
       <StoredType>integer|0s</StoredType>
       <TypeId>23</TypeId>
     </column>
-    <index id="290" parent="273" name="doctrine_migration_versions_pkey">
+    <index id="281" parent="271" name="doctrine_migration_versions_pkey">
       <ColNames>version</ColNames>
       <NameSurrogate>1</NameSurrogate>
       <ObjectId>16391</ObjectId>
@@ -4443,14 +4369,14 @@ true posixrules
       <CollationIds>100</CollationIds>
       <CollationParentNames>pg_catalog</CollationParentNames>
     </index>
-    <key id="291" parent="273" name="doctrine_migration_versions_pkey">
+    <key id="282" parent="271" name="doctrine_migration_versions_pkey">
       <NameSurrogate>1</NameSurrogate>
       <ObjectId>16392</ObjectId>
       <Primary>1</Primary>
       <StateNumber>750</StateNumber>
       <UnderlyingIndexId>16391</UnderlyingIndexId>
     </key>
-    <column id="292" parent="274" name="id">
+    <column id="283" parent="272" name="id">
       <DefaultExpression>nextval(&apos;game_id_seq&apos;::regclass)</DefaultExpression>
       <NotNull>1</NotNull>
       <Position>1</Position>
@@ -4459,21 +4385,21 @@ true posixrules
       <SequenceId>16401</SequenceId>
       <TypeId>23</TypeId>
     </column>
-    <column id="293" parent="274" name="status">
+    <column id="284" parent="272" name="status">
       <NotNull>1</NotNull>
       <Position>2</Position>
       <StateNumber>751</StateNumber>
       <StoredType>varchar(255)|0s</StoredType>
       <TypeId>1043</TypeId>
     </column>
-    <column id="294" parent="274" name="result">
+    <column id="285" parent="272" name="result">
       <DefaultExpression>NULL::character varying</DefaultExpression>
       <Position>3</Position>
       <StateNumber>751</StateNumber>
       <StoredType>varchar(255)|0s</StoredType>
       <TypeId>1043</TypeId>
     </column>
-    <column id="295" parent="274" name="started_at">
+    <column id="286" parent="272" name="started_at">
       <Comment>(DC2Type:datetime_immutable)</Comment>
       <DefaultExpression>NULL::timestamp without time zone</DefaultExpression>
       <Position>4</Position>
@@ -4481,7 +4407,7 @@ true posixrules
       <StoredType>timestamp(0)|0s</StoredType>
       <TypeId>1114</TypeId>
     </column>
-    <column id="296" parent="274" name="ended_at">
+    <column id="287" parent="272" name="ended_at">
       <Comment>(DC2Type:datetime_immutable)</Comment>
       <DefaultExpression>NULL::timestamp without time zone</DefaultExpression>
       <Position>5</Position>
@@ -4489,7 +4415,22 @@ true posixrules
       <StoredType>timestamp(0)|0s</StoredType>
       <TypeId>1114</TypeId>
     </column>
-    <index id="297" parent="274" name="game_pkey">
+    <column id="288" parent="272" name="created_at">
+      <Comment>(DC2Type:datetime_immutable)</Comment>
+      <NotNull>1</NotNull>
+      <Position>6</Position>
+      <StateNumber>788</StateNumber>
+      <StoredType>timestamp(0)|0s</StoredType>
+      <TypeId>1114</TypeId>
+    </column>
+    <column id="289" parent="272" name="board_type">
+      <NotNull>1</NotNull>
+      <Position>7</Position>
+      <StateNumber>789</StateNumber>
+      <StoredType>varchar(255)|0s</StoredType>
+      <TypeId>1043</TypeId>
+    </column>
+    <index id="290" parent="272" name="game_pkey">
       <ColNames>id</ColNames>
       <NameSurrogate>1</NameSurrogate>
       <ObjectId>16411</ObjectId>
@@ -4498,14 +4439,14 @@ true posixrules
       <Unique>1</Unique>
       <AccessMethodId>403</AccessMethodId>
     </index>
-    <key id="298" parent="274" name="game_pkey">
+    <key id="291" parent="272" name="game_pkey">
       <NameSurrogate>1</NameSurrogate>
       <ObjectId>16412</ObjectId>
       <Primary>1</Primary>
       <StateNumber>751</StateNumber>
       <UnderlyingIndexId>16411</UnderlyingIndexId>
     </key>
-    <column id="299" parent="275" name="id">
+    <column id="292" parent="273" name="id">
       <DefaultExpression>nextval(&apos;game_player_id_seq&apos;::regclass)</DefaultExpression>
       <NotNull>1</NotNull>
       <Position>1</Position>
@@ -4514,42 +4455,42 @@ true posixrules
       <SequenceId>16413</SequenceId>
       <TypeId>23</TypeId>
     </column>
-    <column id="300" parent="275" name="game_id">
+    <column id="293" parent="273" name="game_id">
       <NotNull>1</NotNull>
       <Position>2</Position>
       <StateNumber>751</StateNumber>
       <StoredType>integer|0s</StoredType>
       <TypeId>23</TypeId>
     </column>
-    <column id="301" parent="275" name="player_id">
+    <column id="294" parent="273" name="player_id">
       <NotNull>1</NotNull>
       <Position>3</Position>
       <StateNumber>751</StateNumber>
       <StoredType>integer|0s</StoredType>
       <TypeId>23</TypeId>
     </column>
-    <column id="302" parent="275" name="color">
+    <column id="295" parent="273" name="color">
       <NotNull>1</NotNull>
       <Position>4</Position>
       <StateNumber>751</StateNumber>
       <StoredType>varchar(255)|0s</StoredType>
       <TypeId>1043</TypeId>
     </column>
-    <foreign-key id="303" parent="275" name="fk_e52cd7ade48fd905">
+    <foreign-key id="296" parent="273" name="fk_e52cd7ade48fd905">
       <ColNames>game_id</ColNames>
       <ObjectId>16462</ObjectId>
       <StateNumber>751</StateNumber>
       <RefKeyColPositions>1</RefKeyColPositions>
       <RefTableId>16402</RefTableId>
     </foreign-key>
-    <foreign-key id="304" parent="275" name="fk_e52cd7ad99e6f5df">
+    <foreign-key id="297" parent="273" name="fk_e52cd7ad99e6f5df">
       <ColNames>player_id</ColNames>
       <ObjectId>16467</ObjectId>
       <StateNumber>751</StateNumber>
       <RefKeyColPositions>1</RefKeyColPositions>
       <RefTableId>16433</RefTableId>
     </foreign-key>
-    <index id="305" parent="275" name="game_player_pkey">
+    <index id="298" parent="273" name="game_player_pkey">
       <ColNames>id</ColNames>
       <NameSurrogate>1</NameSurrogate>
       <ObjectId>16418</ObjectId>
@@ -4558,26 +4499,26 @@ true posixrules
       <Unique>1</Unique>
       <AccessMethodId>403</AccessMethodId>
     </index>
-    <index id="306" parent="275" name="idx_e52cd7ade48fd905">
+    <index id="299" parent="273" name="idx_e52cd7ade48fd905">
       <ColNames>game_id</ColNames>
       <ObjectId>16420</ObjectId>
       <StateNumber>751</StateNumber>
       <AccessMethodId>403</AccessMethodId>
     </index>
-    <index id="307" parent="275" name="idx_e52cd7ad99e6f5df">
+    <index id="300" parent="273" name="idx_e52cd7ad99e6f5df">
       <ColNames>player_id</ColNames>
       <ObjectId>16421</ObjectId>
       <StateNumber>751</StateNumber>
       <AccessMethodId>403</AccessMethodId>
     </index>
-    <key id="308" parent="275" name="game_player_pkey">
+    <key id="301" parent="273" name="game_player_pkey">
       <NameSurrogate>1</NameSurrogate>
       <ObjectId>16419</ObjectId>
       <Primary>1</Primary>
       <StateNumber>751</StateNumber>
       <UnderlyingIndexId>16418</UnderlyingIndexId>
     </key>
-    <column id="309" parent="276" name="id">
+    <column id="302" parent="274" name="id">
       <DefaultExpression>nextval(&apos;messenger_messages_id_seq&apos;::regclass)</DefaultExpression>
       <NotNull>1</NotNull>
       <Position>1</Position>
@@ -4586,28 +4527,28 @@ true posixrules
       <SequenceId>16442</SequenceId>
       <TypeId>20</TypeId>
     </column>
-    <column id="310" parent="276" name="body">
+    <column id="303" parent="274" name="body">
       <NotNull>1</NotNull>
       <Position>2</Position>
       <StateNumber>751</StateNumber>
       <StoredType>text|0s</StoredType>
       <TypeId>25</TypeId>
     </column>
-    <column id="311" parent="276" name="headers">
+    <column id="304" parent="274" name="headers">
       <NotNull>1</NotNull>
       <Position>3</Position>
       <StateNumber>751</StateNumber>
       <StoredType>text|0s</StoredType>
       <TypeId>25</TypeId>
     </column>
-    <column id="312" parent="276" name="queue_name">
+    <column id="305" parent="274" name="queue_name">
       <NotNull>1</NotNull>
       <Position>4</Position>
       <StateNumber>751</StateNumber>
       <StoredType>varchar(190)|0s</StoredType>
       <TypeId>1043</TypeId>
     </column>
-    <column id="313" parent="276" name="created_at">
+    <column id="306" parent="274" name="created_at">
       <Comment>(DC2Type:datetime_immutable)</Comment>
       <NotNull>1</NotNull>
       <Position>5</Position>
@@ -4615,7 +4556,7 @@ true posixrules
       <StoredType>timestamp(0)|0s</StoredType>
       <TypeId>1114</TypeId>
     </column>
-    <column id="314" parent="276" name="available_at">
+    <column id="307" parent="274" name="available_at">
       <Comment>(DC2Type:datetime_immutable)</Comment>
       <NotNull>1</NotNull>
       <Position>6</Position>
@@ -4623,7 +4564,7 @@ true posixrules
       <StoredType>timestamp(0)|0s</StoredType>
       <TypeId>1114</TypeId>
     </column>
-    <column id="315" parent="276" name="delivered_at">
+    <column id="308" parent="274" name="delivered_at">
       <Comment>(DC2Type:datetime_immutable)</Comment>
       <DefaultExpression>NULL::timestamp without time zone</DefaultExpression>
       <Position>7</Position>
@@ -4631,7 +4572,7 @@ true posixrules
       <StoredType>timestamp(0)|0s</StoredType>
       <TypeId>1114</TypeId>
     </column>
-    <index id="316" parent="276" name="messenger_messages_pkey">
+    <index id="309" parent="274" name="messenger_messages_pkey">
       <ColNames>id</ColNames>
       <NameSurrogate>1</NameSurrogate>
       <ObjectId>16450</ObjectId>
@@ -4640,7 +4581,7 @@ true posixrules
       <Unique>1</Unique>
       <AccessMethodId>403</AccessMethodId>
     </index>
-    <index id="317" parent="276" name="idx_75ea56e0fb7336f0">
+    <index id="310" parent="274" name="idx_75ea56e0fb7336f0">
       <ColNames>queue_name</ColNames>
       <ObjectId>16452</ObjectId>
       <StateNumber>751</StateNumber>
@@ -4649,32 +4590,32 @@ true posixrules
       <CollationIds>100</CollationIds>
       <CollationParentNames>pg_catalog</CollationParentNames>
     </index>
-    <index id="318" parent="276" name="idx_75ea56e0e3bd61ce">
+    <index id="311" parent="274" name="idx_75ea56e0e3bd61ce">
       <ColNames>available_at</ColNames>
       <ObjectId>16453</ObjectId>
       <StateNumber>751</StateNumber>
       <AccessMethodId>403</AccessMethodId>
     </index>
-    <index id="319" parent="276" name="idx_75ea56e016ba31db">
+    <index id="312" parent="274" name="idx_75ea56e016ba31db">
       <ColNames>delivered_at</ColNames>
       <ObjectId>16454</ObjectId>
       <StateNumber>751</StateNumber>
       <AccessMethodId>403</AccessMethodId>
     </index>
-    <key id="320" parent="276" name="messenger_messages_pkey">
+    <key id="313" parent="274" name="messenger_messages_pkey">
       <NameSurrogate>1</NameSurrogate>
       <ObjectId>16451</ObjectId>
       <Primary>1</Primary>
       <StateNumber>751</StateNumber>
       <UnderlyingIndexId>16450</UnderlyingIndexId>
     </key>
-    <trigger id="321" parent="276" name="notify_trigger">
+    <trigger id="314" parent="274" name="notify_trigger">
       <Events>IU</Events>
       <ObjectId>16456</ObjectId>
       <StateNumber>751</StateNumber>
       <CallRoutineId>16455</CallRoutineId>
     </trigger>
-    <column id="322" parent="277" name="id">
+    <column id="315" parent="275" name="id">
       <DefaultExpression>nextval(&apos;move_id_seq&apos;::regclass)</DefaultExpression>
       <NotNull>1</NotNull>
       <Position>1</Position>
@@ -4683,49 +4624,49 @@ true posixrules
       <SequenceId>16422</SequenceId>
       <TypeId>23</TypeId>
     </column>
-    <column id="323" parent="277" name="game_id">
+    <column id="316" parent="275" name="game_id">
       <NotNull>1</NotNull>
       <Position>2</Position>
       <StateNumber>751</StateNumber>
       <StoredType>integer|0s</StoredType>
       <TypeId>23</TypeId>
     </column>
-    <column id="324" parent="277" name="move_number">
+    <column id="317" parent="275" name="move_number">
       <NotNull>1</NotNull>
       <Position>3</Position>
       <StateNumber>751</StateNumber>
       <StoredType>integer|0s</StoredType>
       <TypeId>23</TypeId>
     </column>
-    <column id="325" parent="277" name="from_sq">
+    <column id="318" parent="275" name="from_sq">
       <NotNull>1</NotNull>
       <Position>4</Position>
       <StateNumber>751</StateNumber>
       <StoredType>varchar(255)|0s</StoredType>
       <TypeId>1043</TypeId>
     </column>
-    <column id="326" parent="277" name="to_sq">
+    <column id="319" parent="275" name="to_sq">
       <NotNull>1</NotNull>
       <Position>5</Position>
       <StateNumber>751</StateNumber>
       <StoredType>varchar(255)|0s</StoredType>
       <TypeId>1043</TypeId>
     </column>
-    <column id="327" parent="277" name="color">
+    <column id="320" parent="275" name="color">
       <NotNull>1</NotNull>
       <Position>6</Position>
       <StateNumber>751</StateNumber>
       <StoredType>varchar(255)|0s</StoredType>
       <TypeId>1043</TypeId>
     </column>
-    <column id="328" parent="277" name="piece">
+    <column id="321" parent="275" name="piece">
       <NotNull>1</NotNull>
       <Position>7</Position>
       <StateNumber>751</StateNumber>
       <StoredType>varchar(255)|0s</StoredType>
       <TypeId>1043</TypeId>
     </column>
-    <column id="329" parent="277" name="created_at">
+    <column id="322" parent="275" name="created_at">
       <Comment>(DC2Type:datetime_immutable)</Comment>
       <NotNull>1</NotNull>
       <Position>8</Position>
@@ -4733,14 +4674,14 @@ true posixrules
       <StoredType>timestamp(0)|0s</StoredType>
       <TypeId>1114</TypeId>
     </column>
-    <foreign-key id="330" parent="277" name="fk_ef3e3778e48fd905">
+    <foreign-key id="323" parent="275" name="fk_ef3e3778e48fd905">
       <ColNames>game_id</ColNames>
       <ObjectId>16472</ObjectId>
       <StateNumber>751</StateNumber>
       <RefKeyColPositions>1</RefKeyColPositions>
       <RefTableId>16402</RefTableId>
     </foreign-key>
-    <index id="331" parent="277" name="move_pkey">
+    <index id="324" parent="275" name="move_pkey">
       <ColNames>id</ColNames>
       <NameSurrogate>1</NameSurrogate>
       <ObjectId>16429</ObjectId>
@@ -4749,20 +4690,20 @@ true posixrules
       <Unique>1</Unique>
       <AccessMethodId>403</AccessMethodId>
     </index>
-    <index id="332" parent="277" name="idx_ef3e3778e48fd905">
+    <index id="325" parent="275" name="idx_ef3e3778e48fd905">
       <ColNames>game_id</ColNames>
       <ObjectId>16431</ObjectId>
       <StateNumber>751</StateNumber>
       <AccessMethodId>403</AccessMethodId>
     </index>
-    <key id="333" parent="277" name="move_pkey">
+    <key id="326" parent="275" name="move_pkey">
       <NameSurrogate>1</NameSurrogate>
       <ObjectId>16430</ObjectId>
       <Primary>1</Primary>
       <StateNumber>751</StateNumber>
       <UnderlyingIndexId>16429</UnderlyingIndexId>
     </key>
-    <column id="334" parent="278" name="id">
+    <column id="327" parent="276" name="id">
       <DefaultExpression>nextval(&apos;user_id_seq&apos;::regclass)</DefaultExpression>
       <NotNull>1</NotNull>
       <Position>1</Position>
@@ -4771,35 +4712,35 @@ true posixrules
       <SequenceId>16432</SequenceId>
       <TypeId>23</TypeId>
     </column>
-    <column id="335" parent="278" name="email">
+    <column id="328" parent="276" name="email">
       <NotNull>1</NotNull>
       <Position>2</Position>
       <StateNumber>751</StateNumber>
       <StoredType>varchar(180)|0s</StoredType>
       <TypeId>1043</TypeId>
     </column>
-    <column id="336" parent="278" name="roles">
+    <column id="329" parent="276" name="roles">
       <NotNull>1</NotNull>
       <Position>3</Position>
       <StateNumber>751</StateNumber>
       <StoredType>json|0s</StoredType>
       <TypeId>114</TypeId>
     </column>
-    <column id="337" parent="278" name="password">
+    <column id="330" parent="276" name="password">
       <NotNull>1</NotNull>
       <Position>4</Position>
       <StateNumber>751</StateNumber>
       <StoredType>varchar(255)|0s</StoredType>
       <TypeId>1043</TypeId>
     </column>
-    <column id="338" parent="278" name="username">
+    <column id="331" parent="276" name="username">
       <NotNull>1</NotNull>
       <Position>5</Position>
       <StateNumber>751</StateNumber>
       <StoredType>varchar(255)|0s</StoredType>
       <TypeId>1043</TypeId>
     </column>
-    <index id="339" parent="278" name="user_pkey">
+    <index id="332" parent="276" name="user_pkey">
       <ColNames>id</ColNames>
       <NameSurrogate>1</NameSurrogate>
       <ObjectId>16439</ObjectId>
@@ -4808,7 +4749,7 @@ true posixrules
       <Unique>1</Unique>
       <AccessMethodId>403</AccessMethodId>
     </index>
-    <index id="340" parent="278" name="uniq_identifier_email">
+    <index id="333" parent="276" name="uniq_identifier_email">
       <ColNames>email</ColNames>
       <ObjectId>16441</ObjectId>
       <StateNumber>751</StateNumber>
@@ -4818,7 +4759,17 @@ true posixrules
       <CollationIds>100</CollationIds>
       <CollationParentNames>pg_catalog</CollationParentNames>
     </index>
-    <key id="341" parent="278" name="user_pkey">
+    <index id="334" parent="276" name="uniq_identifier_username">
+      <ColNames>username</ColNames>
+      <ObjectId>16477</ObjectId>
+      <StateNumber>787</StateNumber>
+      <Unique>1</Unique>
+      <AccessMethodId>403</AccessMethodId>
+      <CollationNames>default</CollationNames>
+      <CollationIds>100</CollationIds>
+      <CollationParentNames>pg_catalog</CollationParentNames>
+    </index>
+    <key id="335" parent="276" name="user_pkey">
       <NameSurrogate>1</NameSurrogate>
       <ObjectId>16440</ObjectId>
       <Primary>1</Primary>
