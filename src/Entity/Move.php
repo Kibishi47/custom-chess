@@ -40,11 +40,6 @@ class Move
         $this->createdAt = new \DateTimeImmutable();
     }
 
-    public function getOppositeColor(): string
-    {
-        return $this->color === 'white' ? 'black' : 'white';
-    }
-
     public function getId(): ?int
     {
         return $this->id;
@@ -58,7 +53,6 @@ class Move
     public function setMoveNumber(int $moveNumber): static
     {
         $this->moveNumber = $moveNumber;
-
         return $this;
     }
 
@@ -70,7 +64,6 @@ class Move
     public function setFromSq(string $fromSq): static
     {
         $this->fromSq = $fromSq;
-
         return $this;
     }
 
@@ -82,7 +75,6 @@ class Move
     public function setToSq(string $toSq): static
     {
         $this->toSq = $toSq;
-
         return $this;
     }
 
@@ -94,7 +86,6 @@ class Move
     public function setColor(string $color): static
     {
         $this->color = $color;
-
         return $this;
     }
 
@@ -106,19 +97,6 @@ class Move
     public function setPiece(string $piece): static
     {
         $this->piece = $piece;
-
-        return $this;
-    }
-
-    public function getCreatedAt(): ?\DateTimeImmutable
-    {
-        return $this->createdAt;
-    }
-
-    public function setCreatedAt(\DateTimeImmutable $createdAt): static
-    {
-        $this->createdAt = $createdAt;
-
         return $this;
     }
 
@@ -130,7 +108,11 @@ class Move
     public function setGame(?Game $game): static
     {
         $this->game = $game;
-
         return $this;
+    }
+
+    public function getOppositeColor(): string
+    {
+        return $this->color === 'white' ? 'black' : 'white';
     }
 }

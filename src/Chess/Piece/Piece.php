@@ -9,11 +9,13 @@ use function Symfony\Component\String\u;
 abstract class Piece
 {
     public bool $canBeChecked = false;
+    public bool $canJump = false;
+    public bool $hasMoved = false;
     public Square $startingSquare;
 
     public function __construct(
         public Square $square,
-        public string $color // white | black
+        public string $color
     ) {
         $this->startingSquare = clone $square;
     }
@@ -25,8 +27,7 @@ abstract class Piece
 
     public function isAtStartingSquare(): bool
     {
-        return $this->startingSquare->position->x === $this->square->position->x
-            && $this->startingSquare->position->y === $this->square->position->y;
+        return !$this->hasMoved;
     }
 
     public function getPosition(): Position
@@ -34,22 +35,25 @@ abstract class Piece
         return $this->square->position;
     }
 
+    public function markMoved(): void
+    {
+        $this->hasMoved = true;
+    }
+
     public function canMoveTo(Square $endSquare, bool $strictColor = true): bool
     {
-        // Same position → illegal
         if ($this->getPosition()->x === $endSquare->position->x
             && $this->getPosition()->y === $endSquare->position->y) {
             return false;
         }
 
-        // Cannot capture same color
-        if ($endSquare->piece
-            && $endSquare->piece->color === $this->color
-            && $strictColor) {
+        if ($strictColor && $endSquare->piece
+            && $endSquare->piece->color === $this->color) {
             return false;
         }
 
-        return $this->isLegalMove($endSquare);
+        return $this->isLegalMove($endSquare)
+            && ($this->canJump || $this->nothingBlocking($endSquare));
     }
 
     abstract protected function isLegalMove(Square $endSquare): bool;

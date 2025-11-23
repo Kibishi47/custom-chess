@@ -7,12 +7,12 @@ use App\Chess\Piece\Piece;
 
 class Knight extends Piece
 {
+    public bool $canJump = true;
+
     protected function isLegalMove(Square $endSquare): bool
     {
         [$dx, $dy] = $this->getPosition()->delta($endSquare->position);
 
-        // Cavalier = L
-        return ($dx === 1 && $dy === 2)
-            || ($dx === 2 && $dy === 1);
+        return ($dx === 2 && $dy === 1) || ($dx === 1 && $dy === 2);
     }
 }

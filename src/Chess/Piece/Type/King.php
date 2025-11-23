@@ -13,6 +13,14 @@ class King extends Piece
     {
         [$dx, $dy] = $this->getPosition()->delta($endSquare->position);
 
-        return $dx <= 1 && $dy <= 1;
+        if ($dx <= 1 && $dy <= 1) {
+            return true;
+        }
+
+        if ($dy === 0 && $dx === 2 && !$this->hasMoved) {
+            return true;
+        }
+
+        return false;
     }
 }

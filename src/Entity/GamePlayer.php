@@ -40,7 +40,6 @@ class GamePlayer
     public function setColor(string $color): static
     {
         $this->color = $color;
-
         return $this;
     }
 
@@ -52,7 +51,6 @@ class GamePlayer
     public function setGame(?Game $game): static
     {
         $this->game = $game;
-
         return $this;
     }
 
@@ -64,7 +62,6 @@ class GamePlayer
     public function setPlayer(?User $player): static
     {
         $this->player = $player;
-
         return $this;
     }
 }

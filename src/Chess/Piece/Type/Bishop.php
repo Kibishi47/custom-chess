@@ -11,11 +11,6 @@ class Bishop extends Piece
     {
         [$dx, $dy] = $this->getPosition()->delta($endSquare->position);
 
-        // Fou = diagonale uniquement
-        if ($dx !== $dy) {
-            return false;
-        }
-
-        return $this->nothingBlocking($endSquare);
+        return $dx === $dy;
     }
 }

@@ -10,7 +10,7 @@ class Square
         public ?Board $board,
         public Position $position,
         public ?Piece $piece = null,
-        public bool $enPassant = false,
+        public bool $enPassant = false
     ) {}
 
     public function toSquare(): string

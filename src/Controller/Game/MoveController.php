@@ -5,52 +5,40 @@ namespace App\Controller\Game;
 use App\Dto\MoveDto;
 use App\Entity\Game;
 use App\Entity\Move;
+use App\Chess\Engine\GameEngine;
 use App\Service\Mercure\MercurePublisher;
-use App\Validator\MoveIsLegal;
 use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
-use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\HttpKernel\Attribute\MapRequestPayload;
+use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\Routing\Attribute\Route;
 use Symfony\Component\Serializer\SerializerInterface;
-use Symfony\Component\Validator\Validator\ValidatorInterface;
 
 class MoveController extends AbstractController
 {
     public function __construct(
-        private ValidatorInterface $validator,
         private EntityManagerInterface $entityManager,
         private SerializerInterface $serializer,
         private MercurePublisher $publisher,
+        private GameEngine $engine,
     ) {}
 
     #[Route('/api/{game}/moves', methods: ['POST'], format: 'json')]
     public function __invoke(
         #[MapRequestPayload] MoveDto $dto,
-        Game $game,
-    ): JsonResponse
-    {
-        $errors = $this->validator->validate(
-            $dto,
-            [new MoveIsLegal(board: $game->getBoard())]
-        );
-
-        if (count($errors) > 0) {
-            return $this->json($errors, 400);
-        }
-
+        Game $game
+    ): JsonResponse {
         $move = (new Move())
-            ->setMoveNumber(0)
+            ->setMoveNumber($game->getNextMoveNumber())
             ->setFromSq($dto->getFromSq())
             ->setToSq($dto->getToSq())
             ->setColor($dto->getColor())
-            ->setPiece($dto->getPiece())
-        ;
+            ->setPiece($dto->getPiece());
 
-        $game->applyMove($move);
-        $game->addMove($move);
+        $this->engine->applyMove($game, $move);
 
         $this->entityManager->persist($move);
+        $this->entityManager->persist($game);
         $this->entityManager->flush();
 
         $this->publishGame($game);
@@ -60,14 +48,14 @@ class MoveController extends AbstractController
 
     private function publishGame(Game $game): void
     {
-        $gameSerialized = $this->serializeGame($game);
-        $this->publisher->publish("/api/game/{$game->getId()}", $gameSerialized);
+        $data = $this->serializeGame($game);
+        $this->publisher->publish("/api/game/{$game->getId()}", $data);
     }
 
     private function serializeGame(Game $game): string
     {
         return $this->serializer->serialize($game, 'json', [
-            'groups' => ['game.info'],
+            'groups' => ['game.info']
         ]);
     }
 }

@@ -28,7 +28,7 @@ abstract class Board
                     $this,
                     new Position($x, $y),
                     null,
-                    false,
+                    false
                 );
             }
         }
@@ -36,69 +36,18 @@ abstract class Board
 
     abstract protected function setup(): void;
 
-    public function inBounds(int $x, int $y): bool
-    {
-        return $x >= 0 && $x < $this->width
-            && $y >= 0 && $y < $this->height;
-    }
-
     public function getSquare(int $x, int $y): ?Square
     {
         return $this->squares[$x][$y] ?? null;
     }
 
-    public function placePiece(Piece $piece): void
+    public function getSquareFromNotation(string $notation): ?Square
     {
-        $pos = $piece->getPosition();
-        $square = $this->getSquare($pos->x, $pos->y);
-        $square->piece = $piece;
-        $piece->square = $square;
+        $pos = $this->squareToPos($notation);
+        return $this->getSquare($pos['x'], $pos['y']);
     }
 
-    public function placePieceByRow(string $pieceClass, int $row, string $color): void
-    {
-        for ($i = 0; $i < $this->width; $i++) {
-            $this->placePiece(new $pieceClass($this->getSquare($i, $row), $color));
-        }
-    }
-
-    /** @return Piece[] */
-    public function getPieces(): array
-    {
-        $pieces = [];
-        foreach ($this->squares as $col) {
-            foreach ($col as $square) {
-                if ($square->piece) {
-                    $pieces[] = $square->piece;
-                }
-            }
-        }
-        return $pieces;
-    }
-
-    public function applyMove(Move $move): void
-    {
-        $from = $this->squareToPos($move->getFromSq());
-        $to   = $this->squareToPos($move->getToSq());
-
-        $fromSq = $this->getSquare($from['x'], $from['y']);
-        $toSq   = $this->getSquare($to['x'], $to['y']);
-
-        if (!$fromSq->piece) {
-            throw new \LogicException("Invalid move history: no piece at {$move->getFromSq()}");
-        }
-
-        $piece = $fromSq->piece;
-
-        // Move
-        $toSq->piece = $piece;
-        $fromSq->piece = null;
-
-        // Update current square
-        $piece->square = $toSq;
-    }
-
-    private function squareToPos(string $square): array
+    public function squareToPos(string $square): array
     {
         $file = ord($square[0]) - ord('a');
         $rank = intval(substr($square, 1)) - 1;
@@ -106,14 +55,38 @@ abstract class Board
         return ['x' => $file, 'y' => $rank];
     }
 
+    public function placePiece(Piece $piece): void
+    {
+        $sq = $piece->square;
+        $this->squares[$sq->position->x][$sq->position->y]->piece = $piece;
+    }
+
+    /**
+     * @return Piece[]
+     */
+    public function getPieces(): array
+    {
+        $pieces = [];
+
+        foreach ($this->squares as $col) {
+            foreach ($col as $sq) {
+                if ($sq->piece) {
+                    $pieces[] = $sq->piece;
+                }
+            }
+        }
+
+        return $pieces;
+    }
+
     public static function createFromGame(Game $game): Board
     {
-        $boardTypeClass = $game->getBoardType();
-        /** @var Board $board */
-        $board = new $boardTypeClass();
+        $class = $game->getBoardType();
+        $board = new $class();
 
         foreach ($game->getMoves() as $move) {
-            $board->applyMove($move);
+            $engine = new \App\Chess\Engine\GameEngine();
+            $engine->applyMoveOnBoard($board, $move);
         }
 
         return $board;
@@ -124,33 +97,37 @@ abstract class Board
         $moves = [];
 
         foreach ($this->getPieces() as $piece) {
-
-            // Only specific color
             if ($piece->color !== $color) {
                 continue;
             }
 
-            $fromSquare = $piece->getPosition()->toSquare();
-            $moves[$fromSquare] = [];
+            $from = $piece->getPosition()->toSquare();
+            $moves[$from] = [];
 
             for ($x = 0; $x < $this->width; $x++) {
                 for ($y = 0; $y < $this->height; $y++) {
+                    $target = $this->squares[$x][$y];
 
-                    /** @var Square $targetSquare */
-                    $targetSquare = $this->getSquare($x, $y);
-
-                    if ($piece->canMoveTo($targetSquare)) {
-                        $moves[$fromSquare][] = $targetSquare->position->toSquare();
+                    if ($piece->canMoveTo($target)) {
+                        $moves[$from][] = $target->position->toSquare();
                     }
                 }
             }
 
-            // Remove unnecessary key
-            if (empty($moves[$fromSquare])) {
-                unset($moves[$fromSquare]);
+            if (empty($moves[$from])) {
+                unset($moves[$from]);
             }
         }
 
         return $moves;
+    }
+
+    public function placePieceByRow(string $pieceClass, int $row, string $color): void
+    {
+        for ($x = 0; $x < $this->width; $x++) {
+            $square = $this->getSquare($x, $row);
+            $piece = new $pieceClass($square, $color);
+            $square->piece = $piece;
+        }
     }
 }

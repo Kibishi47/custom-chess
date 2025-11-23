@@ -5,9 +5,24 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c4ec54ec-3ba6-4c3c-ae5e-d2fa83eee103" name="Changes" comment="feat: mercure working">
+      <change afterPath="$PROJECT_DIR$/src/Chess/Engine/GameEngine.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/symfony2.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/symfony2.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Chess/Board/Board.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Chess/Board/Board.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Chess/Board/Square.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Chess/Board/Square.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Chess/Piece/Piece.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Chess/Piece/Piece.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Chess/Piece/Type/Bishop.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Chess/Piece/Type/Bishop.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Chess/Piece/Type/King.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Chess/Piece/Type/King.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Chess/Piece/Type/Knight.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Chess/Piece/Type/Knight.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Chess/Piece/Type/Pawn.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Chess/Piece/Type/Pawn.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Chess/Piece/Type/Queen.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Chess/Piece/Type/Queen.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Chess/Piece/Type/Rook.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Chess/Piece/Type/Rook.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/Game/GameController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/Game/GameController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Controller/Game/MoveController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/Game/MoveController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Entity/Game.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Game.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/GamePlayer.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/GamePlayer.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/Move.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Move.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Serializer/Normalizer/GameNormalizer.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Serializer/Normalizer/GameNormalizer.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
