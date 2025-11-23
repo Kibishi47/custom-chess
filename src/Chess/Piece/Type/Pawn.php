@@ -25,6 +25,10 @@ class Pawn extends Piece
             return $endSquare->piece === null; // pas de pièce devant
         }
 
+        if ($this->isAtStartingSquare() && $dxAbs === 0 && $dySigned === $direction * 2) {
+            return $this->nothingBlocking($endSquare);
+        }
+
         return false;
     }
 }

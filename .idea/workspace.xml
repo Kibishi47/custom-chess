@@ -5,11 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c4ec54ec-3ba6-4c3c-ae5e-d2fa83eee103" name="Changes" comment="feat: mercure working">
+      <change afterPath="$PROJECT_DIR$/src/Controller/ChessTestController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Controller/TestController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/packages/security.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/packages/security.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Chess/Board/BoardType.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Chess/Board/BoardType.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/Game/GameController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/Game/GameController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/Game/MoveController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/Game/MoveController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Chess/Piece/Piece.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Chess/Piece/Piece.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Chess/Piece/Type/Pawn.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Chess/Piece/Type/Pawn.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -253,7 +253,7 @@
       <workItem from="1762948918607" duration="11942000" />
       <workItem from="1763730839558" duration="1000" />
       <workItem from="1763892933195" duration="163000" />
-      <workItem from="1763893173573" duration="1388000" />
+      <workItem from="1763893173573" duration="1778000" />
     </task>
     <servers />
   </component>

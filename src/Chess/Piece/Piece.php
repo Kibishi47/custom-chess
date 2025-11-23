@@ -9,15 +9,24 @@ use function Symfony\Component\String\u;
 abstract class Piece
 {
     public bool $canBeChecked = false;
+    public Square $startingSquare;
 
     public function __construct(
         public Square $square,
         public string $color // white | black
-    ) {}
+    ) {
+        $this->startingSquare = clone $square;
+    }
 
     public function getKey(): string
     {
         return u((new \ReflectionClass($this))->getShortName())->snake()->toString();
+    }
+
+    public function isAtStartingSquare(): bool
+    {
+        return $this->startingSquare->position->x === $this->square->position->x
+            && $this->startingSquare->position->y === $this->square->position->y;
     }
 
     public function getPosition(): Position
@@ -50,8 +59,7 @@ abstract class Piece
         $start = $this->getPosition();
         $end = $target->position;
 
-        $dx = $end->x - $start->x;
-        $dy = $end->y - $start->y;
+        [$dx, $dy] = $start->signedDelta($end);
 
         $stepX = $dx === 0 ? 0 : ($dx > 0 ? 1 : -1);
         $stepY = $dy === 0 ? 0 : ($dy > 0 ? 1 : -1);
