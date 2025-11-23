@@ -47,12 +47,11 @@ class MoveController extends AbstractController
             ->setPiece($dto->getPiece())
         ;
 
+        $game->applyMove($move);
         $game->addMove($move);
 
         $this->entityManager->persist($move);
         $this->entityManager->flush();
-
-        $game->applyMove($move);
 
         $this->publishGame($game);
 

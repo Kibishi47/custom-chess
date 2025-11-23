@@ -112,9 +112,7 @@ class Game
 
     public function applyMove(Move $move): void
     {
-        if ($this->board) {
-            $this->board->applyMove($move);
-        }
+        $this->getBoard()->applyMove($move);
     }
 
     public function getTurnColor(): string
@@ -124,6 +122,11 @@ class Game
         }
 
         return 'white';
+    }
+
+    public function getNextMoveNumber(): int
+    {
+        return $this->moves->count() + 1;
     }
 
     /*
@@ -254,8 +257,10 @@ class Game
         }
 
         if (!$this->moves->contains($move)) {
+            $moveNumber = $this->getNextMoveNumber();
             $this->moves->add($move);
-            $move->setGame($this);
+            $move->setGame($this)
+                ->setMoveNumber($moveNumber);
         }
 
         return $this;

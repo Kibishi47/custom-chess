@@ -5,11 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c4ec54ec-3ba6-4c3c-ae5e-d2fa83eee103" name="Changes" comment="feat: mercure working">
-      <change afterPath="$PROJECT_DIR$/src/Controller/ChessTestController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Controller/TestController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Chess/Piece/Piece.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Chess/Piece/Piece.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Chess/Piece/Type/Pawn.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Chess/Piece/Type/Pawn.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/Game/MoveController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/Game/MoveController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/Game.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Game.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
