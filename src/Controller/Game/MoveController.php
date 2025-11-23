@@ -40,13 +40,14 @@ class MoveController extends AbstractController
         }
 
         $move = (new Move())
-            ->setGame($game)
             ->setMoveNumber(0)
             ->setFromSq($dto->getFromSq())
             ->setToSq($dto->getToSq())
             ->setColor($dto->getColor())
             ->setPiece($dto->getPiece())
         ;
+
+        $game->addMove($move);
 
         $this->entityManager->persist($move);
         $this->entityManager->flush();
