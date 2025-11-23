@@ -5,10 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c4ec54ec-3ba6-4c3c-ae5e-d2fa83eee103" name="Changes" comment="feat: mercure working">
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/2edd4f1f-5f06-455d-9958-43530292ac3d.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/2edd4f1f-5f06-455d-9958-43530292ac3d.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/2edd4f1f-5f06-455d-9958-43530292ac3d/storage_v2/_src_/database/postgres.edMnLQ/schema/public.abK9xQ.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/2edd4f1f-5f06-455d-9958-43530292ac3d/storage_v2/_src_/database/postgres.edMnLQ/schema/public.abK9xQ.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Chess/Board/Board.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Chess/Board/Board.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frankenphp/Caddyfile" beforeDir="false" afterPath="$PROJECT_DIR$/frankenphp/Caddyfile" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
