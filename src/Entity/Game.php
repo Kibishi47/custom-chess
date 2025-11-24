@@ -47,6 +47,12 @@ class Game
     private ?string $boardType = null;
 
     private ?Board $board = null;
+    public array $legalMoves = [];
+    public bool $dataSetted = false;
+    public array $check = [
+        'white' => false,
+        'black' => false,
+    ];
 
     public function __construct()
     {
@@ -222,5 +228,10 @@ class Game
         $used = $this->gamePlayers->map(fn(GamePlayer $gp) => $gp->getColor())->toArray();
         $available = array_values(array_diff($colors, $used));
         return $available[array_rand($available)];
+    }
+
+    public function hasLegalMoves(): bool
+    {
+        return !empty($this->legalMoves);
     }
 }

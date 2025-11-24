@@ -8,13 +8,13 @@ use App\Entity\Game;
 use App\Entity\GamePlayer;
 use App\Entity\User;
 use App\Repository\GameRepository;
+use App\Service\Game\GameService;
 use App\Service\Mercure\MercurePublisher;
 use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\Routing\Attribute\Route;
 use Symfony\Component\Security\Http\Attribute\CurrentUser;
-use Symfony\Component\Serializer\SerializerInterface;
 use Symfony\Component\HttpKernel\Attribute\MapRequestPayload;
 
 class GameController extends AbstractController
@@ -22,7 +22,7 @@ class GameController extends AbstractController
     public function __construct(
         private GameRepository $gameRepository,
         private EntityManagerInterface $entityManager,
-        private SerializerInterface $serializer,
+        private GameService $gameService,
         private MercurePublisher $publisher,
     ) {}
 
@@ -43,8 +43,10 @@ class GameController extends AbstractController
         #[MapRequestPayload] JoinGameDto $dto,
         #[CurrentUser] User $user
     ): JsonResponse {
+        $serializedContext = ['groups' => ['game.info']];
         if ($activeGame = $this->gameRepository->findActiveGameForPlayer($user)) {
-            return new JsonResponse($this->serializeGame($activeGame), json: true);
+            $serializedActiveGame = $this->gameService->serializeGame($activeGame, $serializedContext);
+            return new JsonResponse($serializedActiveGame, json: true);
         }
 
         if (!$game = $this->gameRepository->findAvailableGame($dto->getBoardType())) {
@@ -65,33 +67,23 @@ class GameController extends AbstractController
         $this->entityManager->persist($game);
         $this->entityManager->flush();
 
-        $this->publishGame($game);
+        $serializedGame = $this->gameService->serializeGame($game, $serializedContext);
+        $this->publisher->publish("/api/game/{$game->getId()}", $serializedGame);
 
-        return new JsonResponse($this->serializeGame($game), json: true);
+        return new JsonResponse($serializedGame, json: true);
     }
 
     #[Route('/api/game/quit', methods: ['POST'])]
     public function quit(#[CurrentUser] User $user): JsonResponse
     {
+        $serializedContext = ['groups' => ['game.info']];
         if ($active = $this->gameRepository->findActiveGameForPlayer($user)) {
             $active->cancel();
             $this->entityManager->flush();
-            $this->publishGame($active);
+            $serializedGame = $this->gameService->serializeGame($active, $serializedContext);
+            $this->publisher->publish("/api/game/{$active->getId()}", $serializedGame);
         }
 
         return new JsonResponse();
-    }
-
-    private function publishGame(Game $game): void
-    {
-        $data = $this->serializeGame($game);
-        $this->publisher->publish("/api/game/{$game->getId()}", $data);
-    }
-
-    private function serializeGame(Game $game): string
-    {
-        return $this->serializer->serialize($game, 'json', [
-            'groups' => ['game.info']
-        ]);
     }
 }

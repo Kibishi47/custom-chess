@@ -25,7 +25,7 @@ class GameNormalizer implements NormalizerInterface
         if (isset($context['groups']) && in_array('game.info', $context['groups'])) {
             $turnColor = $game->getTurnColor();
 
-            $normalizedData['turnColor'] = $turnColor;
+            $normalizedData['turnColor'] = $game->getTurnColor();
             $normalizedData['pieces'] = array_map(
                 function (Piece $piece) {
                     return $piece->toArray();
