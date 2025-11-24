@@ -6,7 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="c4ec54ec-3ba6-4c3c-ae5e-d2fa83eee103" name="Changes" comment="feat: mercure working">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/Game.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Game.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -251,7 +250,7 @@
       <workItem from="1763730839558" duration="1000" />
       <workItem from="1763892933195" duration="163000" />
       <workItem from="1763893173573" duration="1778000" />
-      <workItem from="1764011517012" duration="2211000" />
+      <workItem from="1764011517012" duration="4164000" />
     </task>
     <servers />
   </component>
